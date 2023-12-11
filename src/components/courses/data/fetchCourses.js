@@ -5,7 +5,7 @@ import { Container } from '@edx/paragon';
 const fetchCoursesApi = () => {
   const [courses, setCourses] = useState([]);
   const fetchData = () => {
-    fetch('http://local.overhang.io:8000/api/cookiecutter_courses/v1/list/')
+    fetch('http://local.overhang.io:8000/api/courses/courses/')
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Network response was not ok (status ${response.status})`);

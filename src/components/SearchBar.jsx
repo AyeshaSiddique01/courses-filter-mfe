@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import fetchCoursesApi from './courses/data/fetchCourses';
+import React, { useState } from "react";
+import fetchCoursesApi from "./courses/data/fetchCourses";
 
 const SearchBar = () => {
   const courses = fetchCoursesApi();
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   // Handle search input change
@@ -31,10 +31,10 @@ const SearchBar = () => {
 
       {/* Render the search results here */}
       {searchResults.map((course) => (
-       <div key={course.id}>
-       <img src={course.media.image.raw} alt={course.name} />
-       <div>{course.name}</div>
-     </div>
+        <div key={course.id}>
+          <img src={course.media.image.raw} alt={course.name} />
+          <div>{course.name}</div>
+        </div>
       ))}
     </div>
   );
